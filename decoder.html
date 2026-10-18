@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>न्यूज डिकोडर | MPSC चालू घडामोडी लॅब</title>
+  <meta name="description" content="MPSC परीक्षाभिमुख चालू घडामोडींचे सविस्तर विश्लेषण, अभ्यासक्रम संदर्भ, पूर्व व मुख्य परीक्षा पॉईंटर्स.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner" role="status">
+    <span class="demo-pill">डेमो प्रोटोटाइप / Demo</span>
+    <span>MPSC Current Affairs Lab • शैक्षणिक वापरासाठी प्रायोगिक आवृत्ती (सर्व माहिती नमुना स्वरूपात आहे).</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+          <div class="brand-icon-box" aria-hidden="true">M</div>
+          <div class="brand-titles">
+            <div class="brand-title">
+              MPSC Current Affairs <span class="lab-badge">LAB</span>
+            </div>
+            <div class="brand-subtitle">समजून घ्या • सराव करा • यशस्वी व्हा</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="मुख्य नेव्हिगेशन">
+        <a href="index.html" class="nav-link">🏠 मुख्य पान (Home)</a>
+        <a href="decoder.html" class="nav-link active">📰 न्यूज डिकोडर (Decoder)</a>
+        <a href="quiz.html" class="nav-link">✍️ दैनिक क्विझ (Daily Quiz)</a>
+        <a href="revision.html" class="nav-link">⚡ साप्ताहिक उजळणी (Revision)</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="थीम बदला">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="mobile-bottom-nav" aria-label="मोबाईल नेव्हिगेशन">
+    <a href="index.html" class="mobile-nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>मुख्य पान</span>
+    </a>
+    <a href="decoder.html" class="mobile-nav-item active">
+      <span class="nav-icon">📰</span>
+      <span>डिकोडर</span>
+    </a>
+    <a href="quiz.html" class="mobile-nav-item">
+      <span class="nav-icon">✍️</span>
+      <span>क्विझ</span>
+    </a>
+    <a href="revision.html" class="mobile-nav-item">
+      <span class="nav-icon">⚡</span>
+      <span>उजळणी</span>
+    </a>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper">
+    <!-- Breadcrumb -->
+    <div style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 16px;">
+      <a href="index.html" style="color: var(--brand-orange);">मुख्य पान</a> / <span>न्यूज डिकोडर (News Decoder)</span>
+    </div>
+
+    <!-- Decoder Layout Grid -->
+    <div class="decoder-layout">
+      <!-- Article Content Area (populated by js/decoder.js) -->
+      <article class="decoder-main" id="decoder-content-area" aria-live="polite">
+        <!-- Rendered dynamically via js/decoder.js -->
+        <p style="text-align: center; color: var(--text-muted); padding: 40px 0;">
+          विश्लेषण लोड होत आहे... कृपया प्रतीक्षा करा.
+        </p>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="decoder-sidebar">
+        <!-- Other Decoded Articles Widget -->
+        <div class="sidebar-widget">
+          <h2 class="widget-title">
+            <span>📚</span> इतर विश्लेषित घडामोडी
+          </h2>
+          <ul class="article-nav-list" id="decoder-sidebar-list">
+            <!-- Populated dynamically via js/decoder.js -->
+          </ul>
+        </div>
+
+        <!-- MPSC Syllabus Reference Widget -->
+        <div class="sidebar-widget" style="background-color: var(--bg-subtle);">
+          <h2 class="widget-title">
+            <span>🎯</span> MPSC अभ्यासक्रम गाइड
+          </h2>
+          <div style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);">
+            <p style="margin-bottom: 6px;"><strong>GS-1:</strong> इतिहास, भूगोल, कृषी व समाज</p>
+            <p style="margin-bottom: 6px;"><strong>GS-2:</strong> संविधान, राज्यव्यवस्था, कायदे व आंतरराष्ट्रीय घडामोडी</p>
+            <p style="margin-bottom: 6px;"><strong>GS-3:</strong> अर्थव्यवस्था, विज्ञान-तंत्रज्ञान व पर्यावरण</p>
+            <p><strong>GS-4:</strong> नीतीशास्त्र, सचोटी व योग्यता</p>
+          </div>
+        </div>
+
+        <!-- Quick Quiz Callout -->
+        <div class="sidebar-widget" style="border: 1.5px solid var(--brand-orange);">
+          <h2 class="widget-title" style="color: var(--brand-orange);">
+            <span>✍️</span> दैनिक प्रश्नमंजुषा
+          </h2>
+          <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 12px;">
+            या घटकांवर आधारित आजचे 5 वस्तुनिष्ठ प्रश्न सोडवून आपली तयारी तपासा.
+          </p>
+          <a href="quiz.html" class="btn btn-primary btn-sm" style="width: 100%;">
+            क्विझ सुरू करा →
+          </a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div style="font-weight: 700; color: var(--text-primary); font-size: 15px;">
+        MPSC चालू घडामोडी लॅब (MPSC Current Affairs Lab)
+      </div>
+      <p>
+        महाराष्ट्र राज्य लोकसेवा आयोग परीक्षांसाठी समर्पित डिजिटल शैक्षणिक व्यासपीठ • स्त्रोत: लोकसत्ता, द हिंदू, पीआयबी.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">
+        [डेमो आवृत्ती • Version 1.0] • सर्व माहिती केवळ शैक्षणिक प्रात्यक्षिकासाठी आहे.
+      </p>
+    </div>
+  </footer>
+
+  <script src="data/articles.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/decoder.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>दैनिक सराव प्रश्नमंजुषा | MPSC चालू घडामोडी लॅब</title>
+  <meta name="description" content="MPSC चालू घडामोडींवर आधारित दैनिक वस्तुनिष्ठ प्रश्नमंजुषा. तात्काळ निकाल, योग्य उत्तर व सविस्तर स्पष्टीकरण.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner" role="status">
+    <span class="demo-pill">डेमो प्रोटोटाइप / Demo</span>
+    <span>MPSC Daily Quiz V1 • तात्काळ निकाल व विश्लेषण (कोणतीही वैयक्तिक माहिती न गोळा करता).</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+          <div class="brand-icon-box" aria-hidden="true">M</div>
+          <div class="brand-titles">
+            <div class="brand-title">
+              MPSC Current Affairs <span class="lab-badge">LAB</span>
+            </div>
+            <div class="brand-subtitle">समजून घ्या • सराव करा • यशस्वी व्हा</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="मुख्य नेव्हिगेशन">
+        <a href="index.html" class="nav-link">🏠 मुख्य पान (Home)</a>
+        <a href="decoder.html" class="nav-link">📰 न्यूज डिकोडर (Decoder)</a>
+        <a href="quiz.html" class="nav-link active">✍️ दैनिक क्विझ (Daily Quiz)</a>
+        <a href="revision.html" class="nav-link">⚡ साप्ताहिक उजळणी (Revision)</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="थीम बदला">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="mobile-bottom-nav" aria-label="मोबाईल नेव्हिगेशन">
+    <a href="index.html" class="mobile-nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>मुख्य पान</span>
+    </a>
+    <a href="decoder.html" class="mobile-nav-item">
+      <span class="nav-icon">📰</span>
+      <span>डिकोडर</span>
+    </a>
+    <a href="quiz.html" class="mobile-nav-item active">
+      <span class="nav-icon">✍️</span>
+      <span>क्विझ</span>
+    </a>
+    <a href="revision.html" class="mobile-nav-item">
+      <span class="nav-icon">⚡</span>
+      <span>उजळणी</span>
+    </a>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper">
+    <div class="quiz-container">
+      <!-- Quiz Header Box -->
+      <section class="page-header-box" style="margin-bottom: 20px;">
+        <div class="page-badge-row">
+          <span class="badge badge-mpsc">🎯 MPSC पॅटर्न MCQs</span>
+          <span class="badge badge-category">तात्काळ स्पष्टीकरण (Instant Feedback)</span>
+          <span class="badge badge-demo">[डेमो डेटा / 5 Questions]</span>
+        </div>
+        <h1 class="page-title">दैनिक चालू घडामोडी प्रश्नमंजुषा</h1>
+        <p class="page-subtitle">
+          कोणत्याही पर्यायावर क्लिक करताच तुम्हाला <strong>तात्काळ निकाल, बरोबर उत्तराचा पर्याय आणि सविस्तर मराठी स्पष्टीकरण</strong> दिसेल. 
+          नकारात्मक गुणांकन (Negative Marking) टाळण्यासाठी काळजीपूर्वक विचार करून उत्तर निवडा.
+        </p>
+      </section>
+
+      <!-- Quiz Live Score & Status Bar -->
+      <div class="quiz-top-bar" aria-live="polite">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 14px; font-weight: 600; color: var(--text-secondary);">
+            📅 दिनांक: 18 ऑक्टोबर 2024
+          </span>
+          <span class="badge badge-category">५ प्रश्न संच</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="score-badge">
+            🏆 तुमचे गुण: <span id="live-score-val">0</span> / <span id="total-q-count">5</span>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="reset-quiz-btn" title="क्विझ पुन्हा सुरू करा">
+            🔄 रिसेट (Retry)
+          </button>
+        </div>
+      </div>
+
+      <!-- Question Cards Wrapper (populated by js/quiz.js) -->
+      <div id="quiz-questions-wrapper">
+        <!-- Rendered dynamically -->
+        <p style="text-align: center; color: var(--text-muted); padding: 30px;">
+          प्रश्न लोड होत आहेत...
+        </p>
+      </div>
+
+      <!-- Final Evaluation Card (shown after completing all questions) -->
+      <section class="quiz-final-summary" id="quiz-final-summary" aria-live="assertive">
+        <div class="score-circle" id="summary-score-text">
+          0 / 5
+        </div>
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+          🎉 क्विझ यशस्वीरित्या पूर्ण झाली!
+        </h2>
+        <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 20px;" id="summary-eval-note">
+          तुमच्या निकालाचे विश्लेषण येथे दिसेल.
+        </p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="revision.html" class="btn btn-primary">
+            ⚡ साप्ताहिक उजळणी तपासा
+          </a>
+          <a href="decoder.html" class="btn btn-secondary">
+            📖 संबंधित डिकोडर वाचा
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div style="font-weight: 700; color: var(--text-primary); font-size: 15px;">
+        MPSC चालू घडामोडी लॅब (MPSC Current Affairs Lab)
+      </div>
+      <p>
+        सराव हाच यशाचा पाया आहे • दैनंदिन MPSC पूर्व व मुख्य परीक्षा तयारी व्यासपीठ.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">
+        [डेमो आवृत्ती • Version 1.0] • कोणताही डेटा किंवा कुकीज सर्व्हरवर सेव्ह केली जात नाही.
+      </p>
+    </div>
+  </footer>
+
+  <script src="data/quiz-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

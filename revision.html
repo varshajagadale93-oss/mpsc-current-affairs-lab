@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="mr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>साप्ताहिक उजळणी | MPSC चालू घडामोडी लॅब</title>
+  <meta name="description" content="MPSC चालू घडामोडी साप्ताहिक उजळणी. आठवडाभरातील सर्व घडामोडींची जीएस पेपरनुसार पॉईंटर्समध्ये मांडणी.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Demo Notice Banner -->
+  <div class="demo-banner" role="status">
+    <span class="demo-pill">डेमो प्रोटोटाइप / Demo</span>
+    <span>MPSC Weekly Revision V1 • परीक्षेच्या शेवटच्या क्षणी जलद उजळणीसाठी तयार केलेले मॉड्यूल.</span>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+          <div class="brand-icon-box" aria-hidden="true">M</div>
+          <div class="brand-titles">
+            <div class="brand-title">
+              MPSC Current Affairs <span class="lab-badge">LAB</span>
+            </div>
+            <div class="brand-subtitle">समजून घ्या • सराव करा • यशस्वी व्हा</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="मुख्य नेव्हिगेशन">
+        <a href="index.html" class="nav-link">🏠 मुख्य पान (Home)</a>
+        <a href="decoder.html" class="nav-link">📰 न्यूज डिकोडर (Decoder)</a>
+        <a href="quiz.html" class="nav-link">✍️ दैनिक क्विझ (Daily Quiz)</a>
+        <a href="revision.html" class="nav-link active">⚡ साप्ताहिक उजळणी (Revision)</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="थीम बदला">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="mobile-bottom-nav" aria-label="मोबाईल नेव्हिगेशन">
+    <a href="index.html" class="mobile-nav-item">
+      <span class="nav-icon">🏠</span>
+      <span>मुख्य पान</span>
+    </a>
+    <a href="decoder.html" class="mobile-nav-item">
+      <span class="nav-icon">📰</span>
+      <span>डिकोडर</span>
+    </a>
+    <a href="quiz.html" class="mobile-nav-item">
+      <span class="nav-icon">✍️</span>
+      <span>क्विझ</span>
+    </a>
+    <a href="revision.html" class="mobile-nav-item active">
+      <span class="nav-icon">⚡</span>
+      <span>उजळणी</span>
+    </a>
+  </nav>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper">
+    <!-- Header Box -->
+    <section class="page-header-box">
+      <div class="page-badge-row">
+        <span class="badge badge-mpsc">⚡ ३ मिनिटांची हाय-यील्ड उजळणी</span>
+        <span class="badge badge-category">GS-1, GS-2, GS-3 वर्गीकृत</span>
+        <span class="badge badge-demo">[डेमो डेटा / Sample Digest]</span>
+      </div>
+      <h1 class="page-title">साप्ताहिक महा-उजळणी (Weekly Revision Lab)</h1>
+      <p class="page-subtitle">
+        कमी वेळेत जास्तीत जास्त रिव्हिजन करण्यासाठी एका आठवड्यातील सर्व घडामोडींचे सुटसुटीत संकलन. 
+        कठीण पुस्तकी वर्णनांऐवजी थेट <strong>परीक्षेला विचारले जाणारे की-फॅक्ट्स आणि संकल्पना</strong>.
+      </p>
+    </section>
+
+    <!-- Print & Share Actions Row -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+      <div style="font-size: 14.5px; font-weight: 700; color: var(--text-primary);">
+        📅 सध्याचा आठवडा: 12 ते 18 ऑक्टोबर 2024
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="window.print()">
+          🖨️ प्रिंट / PDF म्हणून सेव्ह करा
+        </button>
+      </div>
+    </div>
+
+    <!-- Revision Week Container (populated dynamically) -->
+    <div id="revision-container">
+      <!-- Populated via script -->
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div style="font-weight: 700; color: var(--text-primary); font-size: 15px;">
+        MPSC चालू घडामोडी लॅब (MPSC Current Affairs Lab)
+      </div>
+      <p>
+        उजळणी हीच स्मरणाची गुरुकिल्ली • MPSC परीक्षेसाठी स्मार्ट डिजिटल नोट्स.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">
+        [डेमो आवृत्ती • Version 1.0] • 100% वेब-फर्स्ट व मोबाईल-फ्रेंडली डिझाइन.
+      </p>
+    </div>
+  </footer>
+
+  <script src="data/revision-data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('revision-container');
+      if (!container || !window.MPSC_REVISION_DATA) return;
+
+      container.innerHTML = window.MPSC_REVISION_DATA.map(week => {
+        return `
+          <section class="revision-week-card">
+            <!-- Header -->
+            <div class="revision-header">
+              <div>
+                <span class="badge ${week.isCurrent ? 'badge-mpsc' : 'badge-category'}">${week.badge}</span>
+                <h2 style="font-size: 20px; font-weight: 700; margin-top: 6px; color: var(--text-primary);">
+                  ${week.weekTitle}
+                </h2>
+              </div>
+              <span style="font-size: 13px; color: var(--text-muted);">
+                📌 ${week.highlightsCount} महत्त्वाचे पॉईंटर्स
+              </span>
+            </div>
+
+            <!-- Subject-wise Categories -->
+            ${week.categories.map(cat => `
+              <div class="category-block">
+                <span class="category-title-pill" style="background-color: ${cat.color};">
+                  ${cat.name}
+                </span>
+
+                <div class="revision-items-grid">
+                  ${cat.items.map(item => `
+                    <div class="revision-item-card">
+                      <h3 class="revision-item-title">${item.title}</h3>
+                      <ul class="revision-bullets">
+                        ${item.keyPoints.map(pt => `<li>${pt}</li>`).join('')}
+                      </ul>
+                      <div class="exam-tip-pill">
+                        🎯 <strong>परीक्षेचा दृष्टिकोन:</strong> ${item.examTip}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            `).join('')}
+
+            <!-- 3-Minute Quick Flashcards -->
+            <div style="margin-top: 24px; border-top: 1px dashed var(--border-medium); padding-top: 18px;">
+              <h3 style="font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                ⚡ १-मिनिट फ्लॅश मेमरी कार्ड्स (Quick Flashcards)
+              </h3>
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+                परीक्षेच्या आदल्या दिवशी डोळ्याखालून घालण्यासाठी कळीचे प्रश्न आणि तात्काळ उत्तरे:
+              </p>
+
+              <div class="flashcards-grid">
+                ${week.quickFlashcards.map(fc => `
+                  <div class="flashcard">
+                    <span class="flashcard-q">❓ ${fc.q}</span>
+                    <span class="flashcard-a">✓ ${fc.a}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>
